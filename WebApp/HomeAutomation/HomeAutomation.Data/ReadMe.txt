@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext "Data Source=(local);Database=HomeAutomation;User ID=HomeAutomationWebApp;Password=^FZt7v%3R36*" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Entities -Project HomeAutomation.Data -Schemas dbo -f
