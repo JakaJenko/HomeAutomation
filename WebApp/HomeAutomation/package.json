@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@vue/composition-api": "^1.7.0",
-    "vuejs-smart-table": "^1.0.0-beta.6"
-  }
-}

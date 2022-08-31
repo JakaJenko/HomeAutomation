@@ -37,7 +37,8 @@
 	<VTable :data="sensors.values"
 			:pageSize="10"
 			v-model:currentPage="currentPage"
-			@totalPagesChanged="totalPages = $event">
+			@totalPagesChanged="totalPages = $event"
+			class="table">
 		<template #head>
 			<tr>
 				<th>Name</th>
@@ -52,8 +53,8 @@
 				<td>{{ row.name }}</td>
 				<td>{{ row.sensorTypeID }}</td>
 				<td>{{ row.codeVersion }}</td>
-				<td><button @click="edit(row.id)">Edit</button></td>
-				<td><button @click="remove(row.id)">Delete</button></td>
+				<td><i @click="edit(row.id)" role="button" class="bi bi-pen"></i></td>
+				<td><i @click="remove(row.id)" role="button" class="bi bi-trash"></i></td>
 			</tr>
 		</template>
 	</VTable>

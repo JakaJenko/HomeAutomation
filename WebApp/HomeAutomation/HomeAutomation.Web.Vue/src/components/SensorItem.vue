@@ -13,8 +13,7 @@
 
 	let data = reactive({ sensor: {} as Sensor });
 
-	watch(() => props.id, async () =>
-	{
+	watch(() => props.id, async () => {
 		data.sensor = await Load(props.id);
 		console.log(data.sensor);
 	});
@@ -34,21 +33,27 @@
 </script>
 
 <template>
-	<div>
-		<input type="hidden" v-model="data.sensor.id" /><br />
+	<div class="row">
+		<input type="hidden" v-model="data.sensor.id" />
 
-		<label>Name</label>
-		<input type="text" v-model="data.sensor.name" /><br />
-
-		<label>SensorTypeId</label>
-		<input type="text" v-model.number="data.sensor.sensorTypeID" /><br />
-
-		<label>LocationId</label>
-		<input type="text" v-model.number="data.sensor.locationID" /><br />
-
-		<label>Code version</label>
-		<input type="text" v-model.number="data.sensor.codeVersion" />
-
-		<button @click="submit">Submit</button>
+		<div class="col">
+			<label>Name</label>
+			<input type="text" v-model="data.sensor.name" />
+		</div>
+		<div class="col">
+			<label>SensorTypeId</label>
+			<input type="text" v-model.number="data.sensor.sensorTypeID" />
+		</div>
+		<div class="col">
+			<label>LocationId</label>
+			<input type="text" v-model.number="data.sensor.locationID" />
+		</div>
+		<div class="col">
+			<label>Code version</label>
+			<input type="text" v-model.number="data.sensor.codeVersion" />
+		</div>
+		<div class="col">
+			<button @click="submit">Submit</button>
+		</div>
 	</div>
 </template>
