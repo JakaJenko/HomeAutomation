@@ -34,6 +34,7 @@ function SensorItems() {
 					<TableHead>
 						<TableRow>
 							<TableCell>Name</TableCell>
+							<TableCell>Location ID</TableCell>
 							<TableCell>Sensor type ID</TableCell>
 							<TableCell>Code version</TableCell>
 							<TableCell>Edit</TableCell>
@@ -49,6 +50,7 @@ function SensorItems() {
 								<TableCell component="th" scope="row">
 									{row.name}
 								</TableCell>
+								<TableCell align="right">{row.locationID}</TableCell>
 								<TableCell align="right">{row.sensorTypeID}</TableCell>
 								<TableCell align="right">{row.codeVersion}</TableCell>
 								<TableCell align="right"><button onClick={() => { setSensorId(row.id) }}>Edit</button></TableCell>

@@ -1,0 +1,21 @@
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Name</mat-label>
+  <input matInput [(ngModel)]="sensor.name">
+</mat-form-field>
+
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Location ID</mat-label>
+  <input matInput [(ngModel)]="sensor.locationID" type="number">
+</mat-form-field>
+
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Sensor type ID</mat-label>
+  <input matInput [(ngModel)]="sensor.sensorTypeID" type="number">
+</mat-form-field>
+
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Code version</mat-label>
+  <input matInput [(ngModel)]="sensor.codeVersion" type="number">
+</mat-form-field>
+
+<button (click)="saveSensor()">Submit</button>
